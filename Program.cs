@@ -44,6 +44,16 @@ namespace shiftedup
 			var fib = problem3.Fib(8);
 			Console.WriteLine("Fib {0} = {1}", 8, fib);
 
+			Console.WriteLine("--- Problem 4 ---");
+
+			var problem4 = new Problem4();
+
+			var nums = new List<int>() { 502, 2, 502, 9 };
+
+			var largestNum = problem4.LargestNumber(nums);
+
+			Console.WriteLine("Largest Number: {0}", largestNum);
+
 		}
 	}
 }

@@ -48,7 +48,7 @@ namespace shiftedup
 
 			var problem4 = new Problem4();
 
-			var nums = new List<int>() { 502, 2, 502, 9 };
+			var nums = new List<int>() { 5, 2, 1, 9, 50, 56 };
 
 			var largestNum = problem4.LargestNumber(nums);
 

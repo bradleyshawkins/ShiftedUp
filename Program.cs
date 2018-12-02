@@ -7,16 +7,9 @@ namespace shiftedup
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("--- Problem 1 ---");
+			PrintProblemNumber(1);
 			var problem1 = new Problem1();
-			var numbers = new List<int>()
-			{
-				1,
-				2,
-				3,
-				4,
-				5
-			};
+			var numbers = new List<int>() { 1, 2, 3, 4, 5 };
 
 			var total = problem1.ForLoop(numbers);
 			Console.WriteLine("For loop total: {0}", total);
@@ -27,7 +20,7 @@ namespace shiftedup
 			total = problem1.Recursive(numbers, 0);
 			Console.WriteLine("Recursive total: {0}", total);
 
-			Console.WriteLine("--- Problem 2 ---");
+			PrintProblemNumber(2);
 
 			var problem2 = new Problem2<int>();
 
@@ -37,14 +30,14 @@ namespace shiftedup
 			var combinedList = problem2.CombineList(list1, list2);
 			Console.WriteLine("Combined List: {0}", string.Join(',', combinedList));
 
-			Console.WriteLine("--- Problem 3 ---");
+			PrintProblemNumber(3);
 
 			var problem3 = new Problem3();
 
 			var fib = problem3.Fib(8);
 			Console.WriteLine("Fib {0} = {1}", 8, fib);
 
-			Console.WriteLine("--- Problem 4 ---");
+			PrintProblemNumber(4);
 
 			var problem4 = new Problem4();
 
@@ -54,6 +47,21 @@ namespace shiftedup
 
 			Console.WriteLine("Largest Number: {0}", largestNum);
 
+			PrintProblemNumber(5);
+
+			var problem5 = new Problem5();
+			var hundreds = problem5.AddTo100();
+
+			foreach (var s in hundreds)
+			{
+				Console.WriteLine(s);
+			}
+
+		}
+
+		private static void PrintProblemNumber(int num)
+		{
+			Console.WriteLine("--- Problem {0} ---", num);
 		}
 	}
 }
